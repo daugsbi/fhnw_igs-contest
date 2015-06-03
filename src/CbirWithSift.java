@@ -58,7 +58,7 @@ public class CbirWithSift extends JFrame
 	List<VisualWord> bagofwords = new Vector<VisualWord>();
 	
 	//how many visual words should be classified
-	private static int K = 300;
+	private static int K = 600;
 	
 	//the minimum count of members in a "visual-word" class
 	private static int MIN_CLASS_SIZE = 5;
@@ -74,10 +74,10 @@ public class CbirWithSift extends JFrame
 	private static int steps = 5;
 	
 	//for testing: delay time for showing images in the GUI
-	private static int wait = 1;
+	private static int wait = 0;
 	
 	//maximal distance for a Feature to still qualify as "close" to the next centroid
-	private static int MAX_DIST = 10000;
+	private static int MAX_DIST = 100000;
 	
 	/**
 	 * 
@@ -193,7 +193,7 @@ public class CbirWithSift extends JFrame
 	 
 	 
 	// initial sigma
-	private static float initial_sigma = 1.6f;
+	private static float initial_sigma = 1.4f;
 	// feature descriptor size
 	private static int fdsize = 4;
 	// feature descriptor orientation bins
