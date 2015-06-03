@@ -64,20 +64,20 @@ public class CbirWithSift extends JFrame
 	private static int MIN_CLASS_SIZE = 5;
 	
 	private static final boolean CHOOSE_IMAGES_RANDOMLY = true;
-	private static final String TRAINING_DIR = "Training";
-	private static final String TEST_DIR = "Test";
+	private static final String TRAINING_DIR = "Training2";
+	private static final String TEST_DIR = "Test2";
 	//how many images should be read from the input folders
-	private static int readImages = 50;
+	private static int readImages = 180;
 	
 	//number of SIFT iterations: more steps will produce more features 
 	//default = 4
 	private static int steps = 5;
 	
 	//for testing: delay time for showing images in the GUI
-	private static int wait = 1000;
+	private static int wait = 1;
 	
 	//maximal distance for a Feature to still qualify as "close" to the next centroid
-	private static int MAX_DIST = Integer.MAX_VALUE;
+	private static int MAX_DIST = 10000;
 	
 	/**
 	 * 
@@ -257,7 +257,7 @@ public class CbirWithSift extends JFrame
 				        long startTimeDM=System.currentTimeMillis();
 				        setTitle("Learning: decisionModel");
 				        
-				        IClassifier classifier = new StatisticClassifier(K);
+				        IClassifier classifier = new KnnClassifier(K);
 				        classifier.learn(imageContentTrainingData);
 				        long endTimeDM=System.currentTimeMillis();
 				        
