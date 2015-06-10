@@ -58,7 +58,7 @@ public class CbirWithSift extends JFrame
 	List<VisualWord> bagofwords = new Vector<VisualWord>();
 	
 	//how many visual words should be classified
-	private static int K = 600;
+	private static int K = 450;
 	
 	//the minimum count of members in a "visual-word" class
 	private static int MIN_CLASS_SIZE = 5;
